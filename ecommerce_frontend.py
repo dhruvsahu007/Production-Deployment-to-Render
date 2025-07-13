@@ -2,6 +2,7 @@
 Complete E-commerce Frontend Application
 A full-featured e-commerce web application using Streamlit
 """
+import os
 import streamlit as st
 import requests
 import json
@@ -10,7 +11,7 @@ from datetime import datetime
 import time
 
 # Configuration
-API_BASE_URL = "https://production-deployment-to-render.onrender.com"
+API_BASE_URL = os.environ.get('API_BASE_URL', 'https://production-deployment-to-render.onrender.com')
 
 # Page configuration
 st.set_page_config(
